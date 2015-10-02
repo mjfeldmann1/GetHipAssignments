@@ -14,7 +14,7 @@ System.out.println("Please enter your PIN");
                 entered = input.nextInt();
                 if (entered == 4321) {
                 System.out.println("Welcome to Huge Bank Inc."); //Welcomes user
-                System.out.printf("Your balance: $%s", balance); //Tells user balance
+                System.out.printf("Your balance: $%s.00", balance); //Tells user balance
                 select();
 } else {
 System.out.println("Incorrect PIN");
@@ -58,7 +58,7 @@ entered = input.nextInt();
 if (entered <= balance && entered > 0) {
 balance = balance - entered; //Creates new balacne
 System.out.println("Withdrawl successful");
-System.out.printf("Your balance: $%s", balance);
+System.out.printf("Your balance: $%s.00", balance);
 select();
 } else if (entered == 0) {
 
@@ -79,7 +79,7 @@ entered = input.nextInt();
 if (entered > 0) {
 balance = entered + balance; //Creates new balance
 System.out.println("Deposit successful");
-System.out.printf("Your balance: $%s", balance);
+System.out.printf("Your balance: $%s.00", balance);
 select();
 } else if (entered == 0) {
 System.out.println("Please enter an integer other than 0");
