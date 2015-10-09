@@ -1,1 +1,21 @@
+public class Circle extends Shape implements Printable {
 
+        private double radius; //radius of circle
+        private double area; //area of circle
+
+        public Circle(int radius){
+                super(); //gets everything from Shape
+                this.radius = radius;
+                setShapeType("Circle"); //these are found in Shape and are now set to "Circle"
+                setShapeName("Circle");
+                area = 3.14 * radius * radius;
+    }
+    public double getArea(){
+        return area; //returns the area of the circle
+    }
+    @Override
+    public void printDescription(){
+        //overrides printDescription so that it prints what we want
+        System.out.println("Type: " + getShapeType() + "Radius: " + radius);
+    }
+}
