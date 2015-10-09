@@ -1,1 +1,30 @@
+public abstract class Shape {
+        private String shapeType; //String that will tell what kind of shape it is
 
+        public String getShapeType() {
+                //returns the shapeType
+                return this.shapeType;
+}
+
+        public void setShapeType(String type) {
+                //sets the shapeType to a String named type
+                this.shapeType = type;
+}
+        private String shapeName; //String that will tell the shape's name
+
+        public String getShapeName() {
+                //returns the shapeName
+                return this.shapeName;
+}
+
+        public void setShapeName(String name) {
+                //sets the shapeName to a String named name
+                this.shapeName = name;
+}
+
+        public abstract double getArea(); //will calculate area in the other classes
+
+        public abstract void printDescription(); //will print the description in the other classes
+
+
+}
