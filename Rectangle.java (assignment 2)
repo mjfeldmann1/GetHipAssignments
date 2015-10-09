@@ -1,1 +1,24 @@
+public class Rectangle extends Shape implements Printable {
+        private double width; // width of rectangle
+        private double height; // height of rectangel
+        private double area; //area of rectangle
 
+        public Rectangle(int height, int width){
+                super();
+                this.height = height; //sets height in parenthesis to other height
+                this.width = width;
+                area = this.height * this.width; //calculates area
+                setShapeType("Quadrilateral"); //sets the shapeType to "Quadrilateral"
+                setShapeName("Rectangle");
+
+        }
+        public double getArea() {
+                return area;
+}
+        @Override
+        public void printDescription(){
+                System.out.println("Type: " + getShapeType() + "Height: " + height + "Width: " + width);
+        }
+
+
+}
