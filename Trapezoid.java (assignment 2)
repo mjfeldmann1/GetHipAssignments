@@ -1,1 +1,32 @@
+public class Trapezoid extends Shape implements Printable {
+        private double baseA; //First base of trapezoid
+        private double baseB; //Second base of trapezoid
+        private double height; //Height of trapezoid
+        private double area; //Area of trapezoid
 
+        public Trapezoid(int b1, int b2, int height) {
+                super();
+                this.baseA = baseA;
+                this.baseB = baseB;
+                this.height = height;
+                setShapeType("Quadrilateral");
+                setShapeName("Trapezoid");
+                area = (baseA + baseB)/2 * height;
+
+
+
+}
+
+        public double getArea() {
+                return area;
+}
+
+        @Override
+        public void printDescription() {
+                System.out.println("Type is: " + getShapeType() + "Base A: " + baseA + "Base B: " + baseB + "Height: " + height);
+
+}
+
+
+
+}
