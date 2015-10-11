@@ -4,7 +4,7 @@ public class Trapezoid extends Shape implements Printable {
         private double height; //Height of trapezoid
         private double area; //Area of trapezoid
 
-        public Trapezoid(int b1, int b2, int height) {
+        public Trapezoid(int baseA, int baseB, int height) {
                 super(); //Gets what we need from Shape
                 this.baseA = baseA; //base in parenthesis is set to other base
                 this.baseB = baseB; //base in parenthesis is set to other base
