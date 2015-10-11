@@ -4,10 +4,10 @@ public class Circle extends Shape implements Printable {
         private double area; //area of circle
 
         public Circle(int radius){
-                super(); //gets everything from Shape
-                this.radius = radius; 
-                setShapeType("Circle"); //these are found in Shape and are now set to "Circle"
-                setShapeName("Circle");
+                super(); //gets everything we need from Shape
+                this.radius = radius; //The radius in the parenthesis is set to the other radius
+                setShapeType("Circle"); //sets the ShapeType to "Circle"
+                setShapeName("Circle"); //Sets the ShapeName to "Circle"
                 area = 3.14 * radius * radius; //Calculates area of circle
     }
     public double getArea(){
