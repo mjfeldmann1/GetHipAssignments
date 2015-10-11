@@ -5,10 +5,10 @@ public class Circle extends Shape implements Printable {
 
         public Circle(int radius){
                 super(); //gets everything from Shape
-                this.radius = radius;
+                this.radius = radius; 
                 setShapeType("Circle"); //these are found in Shape and are now set to "Circle"
                 setShapeName("Circle");
-                area = 3.14 * radius * radius;
+                area = 3.14 * radius * radius; //Calculates area of circle
     }
     public double getArea(){
         return area; //returns the area of the circle
@@ -16,6 +16,7 @@ public class Circle extends Shape implements Printable {
     @Override
     public void printDescription(){
         //overrides printDescription so that it prints what we want
-        System.out.println("Type: " + getShapeType() + "Radius: " + radius);
+        System.out.println("Type: " + getShapeType() + ", Radius: " + radius);
     }
 }
+
