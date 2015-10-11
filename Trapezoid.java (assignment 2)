@@ -10,7 +10,7 @@ public class Trapezoid extends Shape implements Printable {
                 this.baseB = baseB; //base in parenthesis is set to other base
                 this.height = height; //height in parenthesis is set to other height
                 setShapeType("Quadrilateral"); //ShapeType is set to "Quadrilateral"
-                setShapeName("Trapezoid"); //ShapeName is set to "Quadrilateral"
+                setShapeName("Trapezoid"); //ShapeName is set to "Trapezoid"
                 area = (baseA + baseB)/2 * height; //Calculates area
 
 
