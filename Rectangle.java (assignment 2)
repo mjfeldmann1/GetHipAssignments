@@ -4,20 +4,21 @@ public class Rectangle extends Shape implements Printable {
         private double area; //area of rectangle
 
         public Rectangle(int height, int width){
-                super();
+                super(); //Gets everything from Shape class
                 this.height = height; //sets height in parenthesis to other height
-                this.width = width;
+                this.width = width; //Sets width in parenthesis to other other width
                 area = this.height * this.width; //calculates area
-                setShapeType("Quadrilateral"); //sets the shapeType to "Quadrilateral"
-                setShapeName("Rectangle");
+                setShapeType("Quadrilateral"); //sets the ShapeType to "Quadrilateral"
+                setShapeName("Rectangle"); //Sets the ShapeName to "Rectangle"
 
         }
         public double getArea() {
-                return area;
+                return area; //returns area
 }
         @Override
         public void printDescription(){
-                System.out.println("Type: " + getShapeType() + "Height: " + height + "Width: " + width);
+                //Prints information about the Rectangle
+                System.out.println("Type: " + getShapeType() + ", Height: " + height + ", Width: " + width);
         }
 
 
