@@ -4,22 +4,24 @@ public class Rhombus extends Shape implements Printable {
         private double area; //Area of rhombus
 
         public Rhombus(int diagonalA, int diagonalB) {
-                super();
-                this.diagonalA = diagonalA;
-                this.diagonalB = diagonalB;
-                setShapeType("Quadrilateral");
-                setShapeName("Rhombus");
+                super(); //Gets what we need from the class Shape, like setShapeType and setShapeName
+                this.diagonalA = diagonalA; //sets diagonal in parenthesis to other diagonal
+                this.diagonalB = diagonalB; //sets diagonal in parenthesis to other diagonal
+                setShapeType("Quadrilateral"); //sets the ShapeType to "Quadrilateral"
+                setShapeName("Rhombus"); //Sets the ShapeName to "Rhombus"
                 area = diagonalA * diagonalB / 2; //Calculates area of Rhombus
 
 }
 
         public double getArea() {
-                return area;
+                return area; //Returns area
 
 }
 
         @Override
-        public void printDescription(){                System.out.println("Type: " + getShapeType() + "Diagonal A: " + diagonalA + "Diagonal B: " + diagonalB);
+        public void printDescription(){
+                //Prints information about the Rhombus
+                System.out.println("Type: " + getShapeType() + ", Diagonal A: " + diagonalA + ", Diagonal B: " + diagonalB);
 }
 
 }
