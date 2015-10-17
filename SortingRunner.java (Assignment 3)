@@ -1,0 +1,63 @@
+import java.util.*;
+//Class that sorts a group of shapes by area from least to greatest using a bubble sort. The complexity is O(n^2)
+public class SortingRunner {
+        private List<Shape> shapes;
+        public SortingRunner() {
+                shapes = new ArrayList<Shape>();
+                //Creates new shapes that will be sorted
+                shapes.add(new Circle(3));
+                shapes.add(new Triangle(6, 2));
+                shapes.add(new Rectangle(1, 2));
+                shapes.add(new Rhombus(4, 8));
+                shapes.add(new Trapezoid(1, 1, 1));
+                shapes.add(new Circle(7));
+                shapes.add(new Triangle(76, 3));
+                shapes.add(new Rectangle(1, 9));
+                shapes.add(new Rhombus(12, 1));
+                shapes.add(new Trapezoid(45, 2, 7));
+
+        }
+        //Main method that creates a new sortingRunner called sortingRunner, that contains the ArrayList shapes, then sorts the shapes, then prints them in order
+        public static void main(String[] args) {
+                SortingRunner sortingRunner = new SortingRunner();
+                sortingRunner.sortShapes();
+                sortingRunner.printShapes();
+        }
+
+        private void sortShapes() {
+                //Only runs the maximum amount of times needed, which is the amount of elements minus 1
+                        for (int j = shapes.size() - 1; j >= 0; j--) {
+
+                                //Start at the low end of the ArrayList and "bubble" the greatest of the remaining to the top
+                                for(int i = 0; i < j; i++){
+                                //If an element is greater than the element to the top, then swap them
+                                        if (shapes.get(i).getArea() > shapes.get(i + 1).getArea()) {
+
+                                                Shape holder = shapes.get(i + 1);
+                                                shapes.set(i + 1, shapes.get(i));
+                                                shapes.set(i, holder);
+
+
+
+                                }
+
+                        }
+                }
+        }
+
+
+        private void printShapes() {
+                //Runs through all the shapes in the ArrayList shapes and prints them in order from least area to greatest area
+                        for(Shape s : shapes) {
+                                System.out.println("Calculating " + s.getShapeName() + " area:");
+                                System.out.println("Area = " + s.getArea());
+                                System.out.println("Printing " + s.getShapeName() + " description:");
+                                s.printDescription();
+
+                        }
+        }
+
+
+
+
+}
